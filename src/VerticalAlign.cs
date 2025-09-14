@@ -1,4 +1,5 @@
 ﻿using Intellenum;
+using Soenneker.Quark.Enums.GlobalKeywords;
 
 namespace Soenneker.Quark.Enums.VerticalAligns;
 
@@ -57,33 +58,5 @@ public partial class VerticalAlign
     /// </summary>
     public static readonly VerticalAlign Bottom = new("bottom");
 
-    /// <summary>
-    /// The element inherits the vertical-align value from its parent element.
-    /// This allows the element to adopt the vertical alignment behavior of its parent.
-    /// </summary>
-    public static readonly VerticalAlign Inherit = new("inherit");
-
-    /// <summary>
-    /// The element resets the vertical-align property to its initial value, which is 'baseline'.
-    /// This effectively removes any custom vertical alignment and returns to the default state.
-    /// </summary>
-    public static readonly VerticalAlign Initial = new("initial");
-
-    /// <summary>
-    /// The element resets the vertical-align property to the value established by the user agent's default stylesheet.
-    /// This reverts to the browser's default vertical alignment behavior.
-    /// </summary>
-    public static readonly VerticalAlign Revert = new("revert");
-
-    /// <summary>
-    /// The element resets the vertical-align property to the value established by the user agent's default stylesheet for the current element.
-    /// This reverts to the browser's default vertical alignment behavior for this specific element type.
-    /// </summary>
-    public static readonly VerticalAlign RevertLayer = new("revert-layer");
-
-    /// <summary>
-    /// The element resets the vertical-align property to its inherited value if it inherits, or to its initial value if it doesn't.
-    /// This provides a way to reset the vertical-align property without explicitly knowing its initial value.
-    /// </summary>
-    public static readonly VerticalAlign Unset = new("unset");
+    public static implicit operator VerticalAlign(GlobalKeyword style) => new(style.Value); // Value is the underlying string
 }
