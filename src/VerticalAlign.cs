@@ -1,7 +1,7 @@
 ﻿using Intellenum;
 using Soenneker.Quark.Enums.GlobalKeywords;
 
-namespace Soenneker.Quark.Enums.VerticalAligns;
+namespace Soenneker.Quark;
 
 /// <summary>
 /// An enumeration for Quark, representing HTML vertical-align CSS values.
