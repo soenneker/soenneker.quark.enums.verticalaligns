@@ -7,7 +7,7 @@ namespace Soenneker.Quark.Enums;
 /// This enum contains all valid CSS vertical-align property keyword values for use in HTML/CSS styling.
 /// </summary>
 [Intellenum<string>]
-public partial class VerticalAlignKeywordKeyword
+public partial class VerticalAlignKeyword
 {
     /// <summary>
     /// Aligns the baseline of the element with the baseline of its parent.
