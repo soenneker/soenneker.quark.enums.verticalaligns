@@ -7,6 +7,7 @@ namespace Soenneker.Quark.Enums;
 /// This enum contains all valid CSS vertical-align property keyword values for use in HTML/CSS styling.
 /// </summary>
 [EnumValue<string>]
+[IncludeEnumValues(typeof(GlobalKeyword))]
 public partial class VerticalAlignKeyword
 {
     /// <summary>
@@ -56,6 +57,4 @@ public partial class VerticalAlignKeyword
     /// This aligns with the bottom of the line box, not just the text.
     /// </summary>
     public static readonly VerticalAlignKeyword Bottom = new("bottom");
-
-    public static implicit operator VerticalAlignKeyword(GlobalKeyword style) => new(style.Value); // Value is the underlying string
 }
